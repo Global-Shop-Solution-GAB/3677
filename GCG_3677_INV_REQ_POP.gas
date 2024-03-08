@@ -1,0 +1,107 @@
+Program.Sub.ScreenSU.Start
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sPart.Declare(String)
+Variable.Local.sSql.Declare(String)
+Variable.Local.sRet.Declare(String)
+
+Function.ODBC.Connection!con.OpenConnection(Variable.Ambient.PDSN,Variable.Ambient.PUser,Variable.Ambient.PPass)
+
+Function.Intrinsic.Control.SelectCase(Variable.Caller.Hook)
+
+'Work Order Change Work Order Hook
+Function.Intrinsic.Control.Case(16660)
+	Function.Intrinsic.Control.CallSub(Workorder)
+
+'Work Order Change Part Hook
+Function.Intrinsic.Control.Case(16661)
+	Function.Intrinsic.Control.CallSub(Workorder)
+
+'Work Order Change Rev Hook
+Function.Intrinsic.Control.Case(16662)
+	Function.Intrinsic.Control.CallSub(Workorder)
+
+'Work Order Change Loc Hook
+Function.Intrinsic.Control.Case(16663)
+	Function.Intrinsic.Control.CallSub(Workorder)
+
+'Supply and Demand Load Part Hook
+Function.Intrinsic.Control.Case(14055)
+	Function.Intrinsic.String.GSSPartString(Variable.Passed.000003,Variable.Passed.000099,Variable.Local.sPart)
+	Function.Intrinsic.String.Build("Select * from GCG_3677_INV_ATTR where PART = '{0}' and LOC = '{1}'",Variable.Local.sPart,Variable.Passed.000004,Variable.Local.sSql)
+	Function.ODBC.Connection!con.OpenLocalRecordsetRO("rst0",Variable.Local.sSql)
+	Function.Intrinsic.Control.If(Variable.ODBC.con!rst0.EOF,=,False)
+		Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000252,"Lock",0)
+	Function.Intrinsic.Control.Else
+		Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000252,"Lock",1)
+	Function.Intrinsic.Control.EndIf
+	Function.ODBC.con!rst0.Close
+
+'Order Entry Lines Load Part Hook
+Function.Intrinsic.Control.Case(12045)
+	Function.Intrinsic.String.GSSPartString(Variable.Passed.000052,Variable.Passed.000053,Variable.Local.sPart)
+	Function.Intrinsic.String.Build("Select * from GCG_3677_INV_ATTR where PART = '{0}' AND LOC = '{1}'",Variable.Local.sPart,Variable.Passed.000054,Variable.Local.sSql)
+	Function.ODBC.Connection!con.OpenLocalRecordsetRO("rst",Variable.Local.sSql)
+	Function.Intrinsic.Control.If(Variable.ODBC.con!rst.EOF,=,False)
+		Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000162,"Lock",0)
+	Function.Intrinsic.Control.Else
+		Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000162,"Lock",1)
+	Function.Intrinsic.Control.EndIf
+	Function.ODBC.con!rst.Close
+
+Function.Intrinsic.Control.EndSelect
+
+Function.ODBC.Connection!con.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ_POP.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.WorkOrder.Start
+F.Intrinsic.Control.SetErrorHandler("WorkOrder_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sPart.Declare(String)
+Variable.Local.sSql.Declare(String)
+
+Function.Intrinsic.String.GSSPartString(Variable.Passed.000012,Variable.Passed.000013,Variable.Local.sPart)
+Function.Intrinsic.String.Build("Select * from GCG_3677_INV_ATTR where PART = '{0}' AND LOC = '{1}'",Variable.Local.sPart,Variable.Passed.000015,Variable.Local.sSql)
+Function.ODBC.Connection!con.OpenLocalRecordsetRO("rst",Variable.Local.sSql)
+Function.Intrinsic.Control.If(Variable.ODBC.con!rst.EOF,=,False)
+	Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000091,"Lock",0)
+Function.Intrinsic.Control.Else
+	Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000091,"Lock",1)
+Function.Intrinsic.Control.EndIf
+Function.ODBC.con!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("WorkOrder_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ_POP.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.WorkOrder.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_3677_INV_REQ_POP$}$SISCO$}$5/9/2016
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$This code works adjacently with GCG_3677_INV_REQ. It will disable the script one button if there is no entry in custom table GCG_3677_INV_ATTR with the part information loaded on screen. Attached to populate and load part hooks.
+Program.Sub.Comments.End
+
