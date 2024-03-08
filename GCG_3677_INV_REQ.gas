@@ -1,0 +1,631 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..create
+Gui.SS_Form1..caption("Part Requirements")
+Gui.SS_Form1..size(4410,4200)
+Gui.SS_Form1..minx(0)
+Gui.SS_Form1..miny(0)
+Gui.SS_Form1..position(0,0)
+Gui.SS_Form1..event(UnLoad,ss_form1_unload)
+Gui.SS_Form1..forecolor(0)
+Gui.SS_Form1..fontstyle(False,False,False,False)
+Gui.SS_Form1..BackColor(-2147483633)
+Gui.SS_Form1..maxbutton(False)
+Gui.SS_Form1..minbutton(False)
+Gui.SS_Form1..mousepointer(0)
+Gui.SS_Form1..sizeable(False)
+Gui.SS_Form1.frmStuff.create(frame)
+Gui.SS_Form1.frmStuff.size(4050,2910)
+Gui.SS_Form1.frmStuff.position(45,70)
+Gui.SS_Form1.frmStuff.borderstyle(0)
+Gui.SS_Form1.chk_DFARS.create(checkbox)
+Gui.SS_Form1.chk_DFARS.caption("DFARS")
+Gui.SS_Form1.chk_DFARS.size(1065,300)
+Gui.SS_Form1.chk_DFARS.position(200,305)
+Gui.SS_Form1.chk_DFARS.parent("frmStuff")
+Gui.SS_Form1.chk_DFARS.defaultvalue("")
+Gui.SS_Form1.chk_DFARS.tabstop(True)
+Gui.SS_Form1.chk_DFARS.tabindex(6)
+Gui.SS_Form1.chk_ITAR.create(checkbox)
+Gui.SS_Form1.chk_ITAR.caption("ITAR")
+Gui.SS_Form1.chk_ITAR.size(1245,300)
+Gui.SS_Form1.chk_ITAR.position(200,1190)
+Gui.SS_Form1.chk_ITAR.parent("frmStuff")
+Gui.SS_Form1.chk_ITAR.defaultvalue("")
+Gui.SS_Form1.chk_ITAR.tabstop(True)
+Gui.SS_Form1.chk_ITAR.tabindex(10)
+Gui.SS_Form1.chk_Passivation.create(checkbox)
+Gui.SS_Form1.chk_Passivation.caption("Passivation")
+Gui.SS_Form1.chk_Passivation.size(1800,300)
+Gui.SS_Form1.chk_Passivation.position(1680,1290)
+Gui.SS_Form1.chk_Passivation.parent("frmStuff")
+Gui.SS_Form1.chk_Passivation.defaultvalue("")
+Gui.SS_Form1.chk_Passivation.tabstop(True)
+Gui.SS_Form1.chk_Passivation.tabindex(13)
+Gui.SS_Form1.chk_Plating.create(checkbox)
+Gui.SS_Form1.chk_Plating.caption("Plating")
+Gui.SS_Form1.chk_Plating.size(1800,300)
+Gui.SS_Form1.chk_Plating.position(1680,540)
+Gui.SS_Form1.chk_Plating.parent("frmStuff")
+Gui.SS_Form1.chk_Plating.defaultvalue("")
+Gui.SS_Form1.chk_Plating.tabstop(True)
+Gui.SS_Form1.chk_Plating.tabindex(9)
+Gui.SS_Form1.chk_HeatTreat.create(checkbox)
+Gui.SS_Form1.chk_HeatTreat.caption("Heat Treat")
+Gui.SS_Form1.chk_HeatTreat.size(1800,300)
+Gui.SS_Form1.chk_HeatTreat.position(1680,915)
+Gui.SS_Form1.chk_HeatTreat.parent("frmStuff")
+Gui.SS_Form1.chk_HeatTreat.defaultvalue("")
+Gui.SS_Form1.chk_HeatTreat.tabstop(True)
+Gui.SS_Form1.chk_HeatTreat.tabindex(11)
+Gui.SS_Form1.chk_PPAP.create(checkbox)
+Gui.SS_Form1.chk_PPAP.caption("PPAP")
+Gui.SS_Form1.chk_PPAP.size(1200,300)
+Gui.SS_Form1.chk_PPAP.position(1680,165)
+Gui.SS_Form1.chk_PPAP.parent("frmStuff")
+Gui.SS_Form1.chk_PPAP.defaultvalue("")
+Gui.SS_Form1.chk_PPAP.tabstop(True)
+Gui.SS_Form1.chk_PPAP.tabindex(7)
+Gui.SS_Form1.chk_FAI.create(checkbox)
+Gui.SS_Form1.chk_FAI.caption("FAI")
+Gui.SS_Form1.chk_FAI.size(1095,300)
+Gui.SS_Form1.chk_FAI.position(195,1620)
+Gui.SS_Form1.chk_FAI.parent("frmStuff")
+Gui.SS_Form1.chk_FAI.defaultvalue("")
+Gui.SS_Form1.chk_FAI.tabstop(True)
+Gui.SS_Form1.chk_FAI.tabindex(12)
+Gui.SS_Form1.lbl_txt_Special.create(label,"Special Instructions",True,1800,200,1,110,2180,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txt_Special.parent("frmStuff")
+Gui.SS_Form1.lbl_txt_Special.defaultvalue("")
+Gui.SS_Form1.txt_Special.create(textbox,"",True,3690,330,0,85,2390,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txt_Special.parent("frmStuff")
+Gui.SS_Form1.txt_Special.maxLength(30)
+Gui.SS_Form1.txt_Special.defaultvalue("")
+Gui.SS_Form1.txt_Special.tabstop(True)
+Gui.SS_Form1.txt_Special.tabindex(14)
+Gui.SS_Form1.chk_ROHS.create(checkbox)
+Gui.SS_Form1.chk_ROHS.caption("ROHS")
+Gui.SS_Form1.chk_ROHS.size(1065,360)
+Gui.SS_Form1.chk_ROHS.position(200,725)
+Gui.SS_Form1.chk_ROHS.parent("frmStuff")
+Gui.SS_Form1.chk_ROHS.defaultvalue("")
+Gui.SS_Form1.chk_ROHS.tabstop(True)
+Gui.SS_Form1.chk_ROHS.tabindex(8)
+Gui.SS_Form1.lblRec.create(label,"",True,600,255,1,3315,200,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lblRec.parent("frmStuff")
+Gui.SS_Form1.lblRec.defaultvalue("")
+Gui.SS_Form1.chk_REACH.Create(CheckBox)
+Gui.SS_Form1.chk_REACH.Size(1560,360)
+Gui.SS_Form1.chk_REACH.Position(1680,1620)
+Gui.SS_Form1.chk_REACH.Parent("frmStuff")
+Gui.SS_Form1.chk_REACH.Caption("REACH")
+Gui.SS_Form1.frmPrt.create(frame)
+Gui.SS_Form1.frmPrt.size(3240,645)
+Gui.SS_Form1.frmPrt.position(90,45)
+Gui.SS_Form1.frmPrt.borderstyle(0)
+Gui.SS_Form1.txtPart.create(textbox,"",True,2010,300,0,65,245,True,0,Arial,8,-2147483643,1)
+Gui.SS_Form1.txtPart.parent("frmPrt")
+Gui.SS_Form1.txtPart.defaultvalue("")
+Gui.SS_Form1.txtPart.tabstop(True)
+Gui.SS_Form1.txtPart.tabindex(1)
+Gui.SS_Form1.lbl2.create(label,"Loc",True,1935,255,1,2705,20,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl2.parent("frmPrt")
+Gui.SS_Form1.lbl2.defaultvalue("")
+Gui.SS_Form1.txtLoc.create(textbox,"",True,405,300,0,2700,245,True,0,Arial,8,-2147483643,1)
+Gui.SS_Form1.txtLoc.parent("frmPrt")
+Gui.SS_Form1.txtLoc.defaultvalue("")
+Gui.SS_Form1.txtLoc.tabstop(True)
+Gui.SS_Form1.txtLoc.tabindex(3)
+Gui.SS_Form1.txtRev.create(textbox,"",True,480,300,0,2130,245,True,0,Arial,8,-2147483643,1)
+Gui.SS_Form1.txtRev.parent("frmPrt")
+Gui.SS_Form1.txtRev.defaultvalue("")
+Gui.SS_Form1.txtRev.tabstop(True)
+Gui.SS_Form1.txtRev.tabindex(2)
+Gui.SS_Form1.lbl3.create(label,"Rev",True,1935,255,1,2130,10,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl3.parent("frmPrt")
+Gui.SS_Form1.lbl3.defaultvalue("")
+Gui.SS_Form1.lbl4.create(label,"Part",True,1935,255,1,90,45,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl4.parent("frmPrt")
+Gui.SS_Form1.lbl4.defaultvalue("")
+Gui.SS_Form1.frmNex.create(frame)
+Gui.SS_Form1.frmNex.size(990,555)
+Gui.SS_Form1.frmNex.position(3275,275)
+Gui.SS_Form1.frmNex.borderstyle(0)
+Gui.SS_Form1.cmdPrev.create(button)
+Gui.SS_Form1.cmdPrev.caption("<")
+Gui.SS_Form1.cmdPrev.size(360,360)
+Gui.SS_Form1.cmdPrev.position(100,100)
+Gui.SS_Form1.cmdPrev.parent("frmNex")
+Gui.SS_Form1.cmdPrev.event(Click,cmdprev_click)
+Gui.SS_Form1.cmdPrev.defaultvalue("")
+Gui.SS_Form1.cmdPrev.tabstop(True)
+Gui.SS_Form1.cmdPrev.tabindex(4)
+Gui.SS_Form1.cmdNext.create(button)
+Gui.SS_Form1.cmdNext.caption(">")
+Gui.SS_Form1.cmdNext.size(360,360)
+Gui.SS_Form1.cmdNext.position(485,100)
+Gui.SS_Form1.cmdNext.parent("frmNex")
+Gui.SS_Form1.cmdNext.event(Click,cmdnext_click)
+Gui.SS_Form1.cmdNext.defaultvalue("")
+Gui.SS_Form1.cmdNext.tabstop(True)
+Gui.SS_Form1.cmdNext.tabindex(5)
+Gui.SS_Form1.cmdSave.create(button)
+Gui.SS_Form1.cmdSave.caption("Save")
+Gui.SS_Form1.cmdSave.size(1000,360)
+Gui.SS_Form1.cmdSave.position(100,3055)
+Gui.SS_Form1.cmdSave.event(Click,cmdsave_click)
+Gui.SS_Form1.cmdSave.defaultvalue("")
+Gui.SS_Form1.cmdSave.tabstop(True)
+Gui.SS_Form1.cmdSave.tabindex(15)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.sPart.Declare(String)
+Variable.Global.sLoc.Declare(String)
+Variable.UDT.uParts.Define("Part",String,Part)
+Variable.UDT.uParts.Define("LOC",String,LOC)
+Variable.UDT.uParts.Define("FLAG_ROHS",Boolean,FLAG_ROHS)
+Variable.UDT.uParts.Define("FLAG_DFARS",Boolean,FLAG_DFARS)
+Variable.UDT.uParts.Define("FLAG_ITAR",Boolean,FLAG_ITAR)
+Variable.UDT.uParts.Define("FLAG_PASSIVATION",Boolean,FLAG_PASSIVATION)
+Variable.UDT.uParts.Define("FLAG_PLATING",Boolean,FLAG_PLATING)
+Variable.UDT.uParts.Define("FLAG_HEATTREAT",Boolean,FLAG_HEATTREAT)
+Variable.UDT.uParts.Define("FLAG_PPAP",Boolean,FLAG_PPAP)
+Variable.UDT.uParts.Define("FLAG_FAI",Boolean,FLAG_FAI)
+Variable.UDT.uParts.Define("FLAG_REACH",Boolean,FLAG_REACH)
+Variable.UDT.uParts.Define("SPECIAL_INSTRUCTIONS",STRING,SPECIAL_INSTRUCTIONS)
+Variable.Global.iUB.Declare(Long,0)
+Variable.uGlobal.uParts.Declare("uParts")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'TJS, November 2019
+'Modified to add "REACH" as a new category at customer's request.
+ F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Caller.GSSVersion,<,"2015.3")
+	F.Intrinsic.UI.Msgbox("Global Shop 2015.3 or higher is required to run this GAB.")
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'HOOKS (LOTS OF 'EM SO GET READY)
+'inventory
+'10120 INVENTORY POPULATE HOOK
+'10210 iNVENTORY SCRIPT 1 BUTTON
+'10170 INVENTORY Save HOOK
+
+'ORDER ENTRY
+'12010 OE POPULATE HOOK
+'12410 OE SCRIPT 1 BUTTON
+
+'SHIPMENTS NeW
+'28510 POPULATE HOOK
+'28550 SCRIPT 1 BUTTON
+
+'WORK ORDER
+'16630 POPULATE HOOK
+'16670 SCRIPT 1 BUTTON
+
+'SUPPLY AND DEMAND
+'14045 POPULATE
+'14070 SCRIPT 1 BUTTON
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	F.Intrinsic.Control.Case("10120")
+		'script 1 text
+		V.Passed.000068.Set("Part Req.")
+	F.Intrinsic.Control.Case("10210")
+		'Script 1 Button
+		F.Intrinsic.Control.if(V.Passed.000007.Trim,=,"")
+			'they didn't select a part duh
+			F.Intrinsic.Control.CallSub(Ss_form1_unload)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.GSSPartString(V.Passed.000007,V.Passed.000008,V.Global.sPart)
+			V.Global.sLoc.Set(V.Passed.000009)
+		Function.Intrinsic.Control.EndIf
+
+		'loda screen
+		Function.Intrinsic.Control.CallSub(Load_screen)
+		Gui.SS_Form1.frmNex.Visible(false)
+		Gui.SS_Form1.frmPrt.Visible(False)
+		Gui.SS_Form1..Show
+
+	F.Intrinsic.Control.Case("10170")
+		'10170 INVENTORY save HOOK could be delete.....
+		F.Intrinsic.Control.If(V.Caller.Switches,<>,"D")
+			Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+		Function.Intrinsic.Control.EndIf
+
+		F.Intrinsic.String.GSSPartString(V.Passed.000007,V.Passed.000008,V.Global.sPart)
+		V.Global.sLoc.Set(V.Passed.000009)
+		Function.Intrinsic.Control.CallSub(Deleterecord)
+	F.Intrinsic.Control.Case("12010")
+		'12010 OE POPULATE HOOK
+		'Script 1 change
+		V.Passed.000162.Set("Part Req.")
+		Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+	F.Intrinsic.Control.Case("12410")
+		'12410 OE SCRIPT 1 BUTTON
+		'	part and rev
+		F.Intrinsic.Control.if(V.Passed.000052.Trim,<>,"")
+			F.Intrinsic.String.GSSPartString(V.Passed.000052,V.Passed.000053,V.Global.sPart)
+			V.Global.sLoc.Set(V.Passed.000054)
+			F.Intrinsic.Control.CallSub(Load_screen)
+			F.Intrinsic.Control.If(V.Args.Exists,=,False)
+				F.Intrinsic.Control.CallSub(Ss_form1_unload)
+			Function.Intrinsic.Control.EndIf
+			'since wer aer in order nad view only make it so
+			Gui.SS_Form1.cmdSave.Visible(False)
+			Gui.SS_Form1.frmNex.Visible(false)
+			Gui.SS_Form1.frmPrt.Visible(False)
+			Gui.SS_Form1.frmStuff.Enabled(False)
+			Gui.SS_Form1..Size(4410,3500)
+			Gui.SS_Form1..Show
+		Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case("28510")
+'		Populate Hook On Shipments
+		V.Passed.000331.Set("Part Req.")
+		Function.Intrinsic.Control.CallSub(Load_grid)
+	F.Intrinsic.Control.Case("28550")
+		'This is the Shipments, we have to read the AUX and populate the part then get infor then have our buttons then have our part info, then have our screen loaded moved
+		'load part grids
+		Function.Intrinsic.Control.CallSub(Load_grid)
+		F.Intrinsic.Control.Do
+			F.Intrinsic.API.SetWindowPositions(V.Caller.Handle,V.Screen.SS_Form1.HWnd,3)
+		F.Intrinsic.Control.Loop
+	F.Intrinsic.Control.Case("16630")
+'		Work Order Populate Hook
+		'change text of script 1 button to read Part Req
+		V.Passed.000091.Set("Part Req.")
+		Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000091,"LOCK",1)
+	F.Intrinsic.Control.Case("16670")
+		'set data
+		'	part and rev1
+		F.Intrinsic.Control.if(V.Passed.000012.Trim,<>,"")
+			F.Intrinsic.String.GSSPartString(V.Passed.000012,V.Passed.000013,V.Global.sPart)
+			V.Global.sLoc.Set(V.Passed.000015)
+			F.Intrinsic.Control.CallSub(Load_screen)
+			F.Intrinsic.Control.If(V.Args.Exists,=,False)
+				F.Intrinsic.Control.CallSub(Ss_form1_unload)
+			Function.Intrinsic.Control.EndIf
+			'since wer aer in order nad view only make it so
+			Gui.SS_Form1.cmdSave.Visible(False)
+			Gui.SS_Form1.frmPrt.Visible(False)
+			Gui.SS_Form1.frmNex.Visible(False)
+			Gui.SS_Form1.frmStuff.Enabled(False)
+			Gui.SS_Form1..Size(4410,3500)
+			Gui.SS_Form1..Show
+		Function.Intrinsic.Control.Else
+			Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+		Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case("14045")
+		'supply and demand popopulate
+		V.Passed.000252.Set("Part Req.")
+	F.Intrinsic.Control.Case("14070")
+		'do the same thing
+'		load
+		'	part and rev1
+		F.Intrinsic.Control.if(V.Passed.000003.Trim,<>,"")
+			F.Intrinsic.String.GSSPartString(V.Passed.000003,V.Passed.000099,V.Global.sPart)
+			V.Global.sLoc.Set(V.Passed.000004)
+			F.Intrinsic.Control.CallSub(Load_screen)
+			F.Intrinsic.Control.If(V.Args.Exists,=,False)
+				F.Intrinsic.Control.CallSub(Ss_form1_unload)
+			Function.Intrinsic.Control.EndIf
+			'since wer aer in order nad view only make it so
+			Gui.SS_Form1.cmdSave.Visible(False)
+			Gui.SS_Form1.frmPrt.Visible(False)
+			Gui.SS_Form1.frmNex.Visible(False)
+			Gui.SS_Form1.frmStuff.Enabled(False)
+			Gui.SS_Form1..Size(4410,3500)
+			Gui.SS_Form1..Show
+		Function.Intrinsic.Control.Else
+			Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+		Function.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.CallSub(Ss_form1_unload)
+F.Intrinsic.Control.EndSelect
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.Load_Screen.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Screen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.bEx.Declare(Boolean)
+
+'We only looking at the GCG_3677_INV_ATTR table Part and loc being key
+F.Intrinsic.String.Build("Select * From GCG_3677_INV_ATTR Where Part = '{0}' And LOC =  '{1}'",V.Global.sPart,V.Global.sLoc,V.Local.sSQL)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+Function.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	'data exists
+	V.Local.bEx.Set(True)
+	'load screen
+	Gui.SS_Form1.chk_ROHS.Value(V.ODBC.conX!rst.FieldVal!Flag_ROHS)
+	Gui.SS_Form1.chk_DFARS.Value(V.ODBC.conX!rst.FieldVal!Flag_DFARS)
+	Gui.SS_Form1.chk_ITAR.Value(V.ODBC.conX!rst.FieldVal!Flag_ITAR)
+	Gui.SS_Form1.chk_Passivation.Value(V.ODBC.conX!rst.FieldVal!Flag_Passivation)
+	Gui.SS_Form1.chk_Plating.Value(V.ODBC.conX!rst.FieldVal!Flag_Plating)
+	Gui.SS_Form1.chk_HeatTreat.Value(V.ODBC.conX!rst.FieldVal!Flag_HeatTreat)
+	Gui.SS_Form1.chk_PPAP.Value(V.ODBC.conX!rst.FieldVal!Flag_PPAP)
+	Gui.SS_Form1.chk_FAI.Value(V.ODBC.conX!rst.FieldVal!Flag_FAI)
+	Gui.SS_Form1.chk_REACH.Value(V.ODBC.conX!rst.FieldVal!Flag_REACH)
+	Gui.SS_Form1.txt_Special.Text(V.ODBC.conX!rst.FieldValTrim!special_instructions)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.AddRV("Exists",v.Local.bEx)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Screen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Load_Screen.End
+
+Program.Sub.cmdsave_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sSQL.Declare(String)
+
+'Save functionality will only be available on the inventory screen so we know that we save back to the table.
+Function.Intrinsic.Control.BlockEvents
+F.Intrinsic.String.Build("Select * From GCG_3677_INV_ATTR Where Part = '{0}' And LOC =  '{1}'",V.Global.sPart,V.Global.sLoc,V.Local.sSQL)
+f.ODBC.Connection!conX.OpenLocalRecordsetRW("rst",V.Local.sSQL)
+Function.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+	f.ODBC.conx!rst.AddNew
+	F.ODBC.conX!rst.Set!Part(V.Global.sPart)
+	f.ODBC.conX!rst.Set!Loc(V.Global.sLoc.Trim)
+Function.Intrinsic.Control.EndIf
+
+F.ODBC.conX!rst.Set!Flag_ROHS(V.Screen.SS_Form1!chk_ROHS.Value)
+f.ODBC.conX!rst.Set!Flag_DFARS(V.Screen.SS_Form1!chk_DFARS.Value)
+f.ODBC.conX!rst.Set!Flag_ITAR(V.Screen.SS_Form1!chk_ITAR.Value)
+F.ODBC.conX!rst.Set!Flag_Passivation(V.Screen.SS_Form1!chk_Passivation.Value)
+F.ODBC.conX!rst.Set!Flag_Plating(V.Screen.SS_Form1!chk_Plating.Value)
+F.ODBC.conX!rst.Set!Flag_HeatTreat(V.Screen.SS_Form1!chk_HeatTreat.Value)
+f.ODBC.conX!rst.Set!flag_PPAP(V.Screen.SS_Form1!chk_PPAP.Value)
+f.ODBC.conX!rst.Set!Flag_FAI(V.Screen.SS_Form1!chk_FAI.Value)
+f.ODBC.conX!rst.Set!Flag_REACH(V.Screen.SS_Form1!chk_REACH.Value)
+f.ODBC.conx!rst.Set!SPECIAL_INSTRUCTIons(V.Screen.SS_Form1!txt_Special.Text)
+
+f.ODBC.conX!rst.Update
+f.ODBC.conX!rst.Close
+
+Function.Intrinsic.Control.UnBlockEvents
+Function.Intrinsic.Control.CallSub(ss_form1_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdsave_click.End
+
+Program.Sub.ss_form1_unload.Start
+F.Intrinsic.Control.SetErrorHandler("ss_form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.Close
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+Program.Sub.ss_form1_unload.End
+
+Program.Sub.DeleteRecord.Start
+F.Intrinsic.Control.SetErrorHandler("DeleteRecord_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.String.Build("Delete From GCG_3677_INV_ATTR WHERE PART = '{0}' AND LOC = '{1}'",V.Global.sPart,V.Global.sLoc,V.Local.sSQL)
+
+F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("DeleteRecord_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.DeleteRecord.End
+
+Program.Sub.cmdprev_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprev_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Function.Intrinsic.Control.If(V.Global.iUB,<=,V.uGlobal.uParts.LBound)
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	f.Intrinsic.Math.Sub(V.Global.iub,1,V.Global.iUB)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.CallSub(load_shipping)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprev_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdprev_click.End
+
+Program.Sub.cmdnext_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdnext_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Function.Intrinsic.Control.If(V.Global.iUB,=,V.uGlobal.uParts.UBound)
+	f.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	f.Intrinsic.Math.Add(V.Global.iUB,1,V.Global.iub)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.CallSub(load_shipping)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdnext_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdnext_click.End
+
+Program.Sub.Load_Grid.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Grid_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.iRows.Declare(Long)
+V.Local.sRow.Declare(String)
+
+V.uGlobal.uParts.Redim(-1,-1)
+
+'go through your grid
+F.Intrinsic.BDF.Load("AUX001","AUX001")
+F.Intrinsic.BDF.ReadRowCount("AUX001",V.Local.iRows)
+V.Local.iRows.Set(V.Local.iRows.--)
+
+'shouldn't have to be 1 less.
+F.Intrinsic.Control.For(V.Local.iRow,0,V.Local.irows,1)
+	F.Intrinsic.BDF.ReadRow("AUX001",V.Local.iRow,V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"|~|",V.Local.sRow)
+	'Part is in 8
+	'Loc is in 10
+	F.Intrinsic.String.Build("Select * From GCG_3677_INV_ATTR Where Part = '{0}' And Loc = '{1}'",V.Local.sRow(8).Trim,V.Local.sRow(10).Trim,V.Local.sSQL)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		'load into udt
+		F.Intrinsic.Variable.LoadUDTFromRecordset("conX","rst","v.uglobal.uParts",True)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+F.Intrinsic.Control.Next(V.Local.iRow)
+
+'Grays out Script 1 button if no parts have available entry
+Function.Intrinsic.Control.If(Variable.Caller.Hook,=,28510)
+	Function.Intrinsic.Control.If(Variable.uGlobal.uParts.UBound,=,-1)
+		Function.Intrinsic.UI.ChangeCallerProperty(Variable.Passed.000331,"LOCK",1)
+	Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+'load Shipping
+F.Intrinsic.Control.If(V.uGlobal.uParts.UBound,<>,-1)
+	V.Global.iub.Set(0)
+	'finnagle our screen around a bit
+	'Move FrmStuff down
+	Gui.SS_Form1.frmStuff.Position(40,865)
+	Gui.SS_Form1.cmdSave.Visible(False)
+	Gui.SS_Form1..Size(4410,4450)
+	Gui.SS_Form1.frmPrt.Enabled(False)
+	Gui.SS_Form1.frmStuff.Enabled(False)
+	Function.Intrinsic.Control.CallSub(Load_shipping)
+Function.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Grid_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Load_Grid.End
+
+Program.Sub.Load_Shipping.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Shipping_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.iT.Declare(Long)
+
+V.Local.iT.Redim(0,1)
+
+'gui.SS_Form1..Visible(false)
+
+'start at the bottom then we here.
+'load based on our global iUB value
+
+'load parts information at the top
+F.Intrinsic.String.RPad(v.uGlobal.uParts(v.Global.iUB)!Part," ",20,v.Local.sPart)
+
+Gui.SS_Form1.txtPart.Text(v.Local.sPart.left17)
+Gui.SS_Form1.txtRev.text(v.Local.sPart.right3)
+Gui.SS_Form1.txtLoc.Text(V.uGlobal.uParts(v.Global.iUB)!LOC)
+Gui.SS_Form1.chk_ROHS.Value(V.uGlobal.uParts(v.global.iUB)!Flag_ROHS)
+Gui.SS_Form1.chk_DFARS.Value(V.uGlobal.uParts(v.global.iUB)!Flag_DFARS)
+Gui.SS_Form1.chk_ITAR.Value(V.uGlobal.uParts(v.global.iUB)!Flag_ITAR)
+Gui.SS_Form1.chk_Passivation.Value(V.uGlobal.uParts(v.global.iUB)!Flag_Passivation)
+Gui.SS_Form1.chk_Plating.Value(V.uGlobal.uParts(v.global.iUB)!Flag_Plating)
+Gui.SS_Form1.chk_HeatTreat.Value(V.uGlobal.uParts(v.global.iUB)!Flag_HeatTreat)
+Gui.SS_Form1.chk_PPAP.Value(V.uGlobal.uParts(v.global.iUB)!Flag_PPAP)
+Gui.SS_Form1.chk_FAI.Value(V.uGlobal.uParts(v.global.iUB)!Flag_FAI)
+Gui.SS_Form1.chk_REACH.Value(V.uGlobal.uParts(v.global.iUB)!Flag_REACH)
+Gui.SS_Form1.txt_Special.Text(V.uGlobal.uParts(v.global.iUB)!special_instructions)
+
+'set our little label text ;)
+'F.Intrinsic.String.Build("{0} of {1}",v.Global.iub.++,v.uGlobal.uParts.UBound.++,v.Local.sPart)
+F.Intrinsic.Math.Add(v.Global.iUB,1,v.Local.iT(0))
+F.Intrinsic.Math.Add(v.uGlobal.uparts.UBound,1,v.Local.it(1))
+
+F.Intrinsic.String.Build("{0} of {1}",v.Local.iT(0),v.Local.iT(1),v.Local.sPart)
+
+Gui.SS_Form1.lblRec.Caption(v.Local.sPart)
+
+'Gui.SS_Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Shipping_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3677_INV_REQ.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Load_Shipping.End
